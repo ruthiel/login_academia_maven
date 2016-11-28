@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import org.academiadecodigo.model.Navigation;
+import org.academiadecodigo.Navigation;
 
 import java.net.URL;
 import java.util.ResourceBundle;

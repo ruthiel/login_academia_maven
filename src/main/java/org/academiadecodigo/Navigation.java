@@ -1,4 +1,4 @@
-package org.academiadecodigo.model;
+package org.academiadecodigo;
 
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

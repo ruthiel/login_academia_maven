@@ -1,4 +1,6 @@
-package org.academiadecodigo.model;
+package org.academiadecodigo.service;
+
+import org.academiadecodigo.model.User;
 
 /**
  * Created by codecadet on 15/11/16.

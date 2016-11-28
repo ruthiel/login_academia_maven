@@ -1,4 +1,6 @@
-package org.academiadecodigo.model;
+package org.academiadecodigo.service;
+
+import org.academiadecodigo.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
