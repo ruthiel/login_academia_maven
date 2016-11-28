@@ -25,7 +25,7 @@ public class ConnectionManager {
     public ConnectionManager(String user, String pass, String host, String dataBase) {
         this.user = user;
         this.pass = pass;
-        this.dbURL = CONNECTOR + "//" + host + "/" + dataBase;
+        this.dbURL = CONNECTOR + "//" + host + "/" + dataBase + "?useSSL=false";
     }
 
     public ConnectionManager() {

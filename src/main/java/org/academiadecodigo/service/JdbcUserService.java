@@ -111,10 +111,9 @@ public class JdbcUserService implements UserService {
 
         ResultSet resultSet = null;
         try {
-            int tmp = statement.executeUpdate(query);
-            if (tmp == 0) {
+            resultSet = statement.executeQuery(query);
+            if (resultSet.next()) {
 
-            } else {
                 String usernameValue = resultSet.getString(2);
                 String passwordValue = resultSet.getString(3);
                 String emaiValue = resultSet.getString(4);
