@@ -9,20 +9,39 @@ import java.sql.SQLException;
  */
 public class ConnectionManager {
 
+    private static final String DEFAULT_USER = "root";
+    private static final String DEFAULT_PASS = "";
+    private static final String DEFAULT_HOST = "localhost";
+    private static final String DEFAULT_DB = "users";
+
+    private static final String CONNECTOR = "jdbc:mysql:";
+
     private String dbURL;
     private String user;
     private String pass;
+    private Connection connection;
 
-    Connection connection = null;
+
+    public ConnectionManager(String user, String pass, String host, String dataBase) {
+        this.user = user;
+        this.pass = pass;
+        this.dbURL = CONNECTOR + "//" + host + "/" + dataBase;
+    }
+
+    public ConnectionManager() {
+        this(DEFAULT_USER, DEFAULT_PASS, DEFAULT_HOST, DEFAULT_DB);
+    }
+
 
     public Connection getConnection() {
 
         try {
+            System.out.println("Making Connection...");
             if (connection == null) {
                 connection = DriverManager.getConnection(dbURL, user, pass);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Fail to connect to DataBase!" + e.getMessage());
         }
 
         return connection;
@@ -33,7 +52,7 @@ public class ConnectionManager {
             try {
                 connection.close();
             } catch (SQLException e) {
-                e.printStackTrace();
+                System.out.println("Fail to close!" +  e.getMessage());
             }
         }
     }
