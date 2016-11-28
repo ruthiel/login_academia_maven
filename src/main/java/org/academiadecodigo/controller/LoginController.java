@@ -14,7 +14,8 @@
     import javafx.scene.layout.VBox;
     import org.academiadecodigo.Navigation;
     import org.academiadecodigo.model.User;
-    import org.academiadecodigo.service.UserService;
+    import org.academiadecodigo.service.ServiceRegistry;
+    import org.academiadecodigo.service.user.UserService;
 
     import java.net.URL;
     import java.util.ResourceBundle;
@@ -109,12 +110,16 @@
         }
 
         private void doLogin() {
+            System.out.println(userService);
             if(userService.authenticate(textfielduser.getText(), passfield.getText())) {
                 Navigation.getInstance().back();
             }
         }
 
         private void doRegister() {
+
+            System.out.println(userService);
+
             //verification of empty field and duplicate user
             if(textfielduser.getText().isEmpty() || userService.findByName(textfielduser.getText()) != null) {
                 message.setText("Error in UserName");
@@ -136,7 +141,9 @@
 
         @Override
         public void initialize(URL location, ResourceBundle resources) {
+            userService = (UserService) ServiceRegistry.getInstance().getService("userService");
             showLogin();
+
 
         }
     }

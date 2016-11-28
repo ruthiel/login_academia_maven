@@ -3,11 +3,11 @@ package org.academiadecodigo;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import org.academiadecodigo.controller.LoginController;
-import org.academiadecodigo.persistence.ConnectionManager;
-import org.academiadecodigo.service.JdbcUserService;
-import org.academiadecodigo.service.MockUserService;
 import org.academiadecodigo.model.User;
-import org.academiadecodigo.service.UserService;
+import org.academiadecodigo.persistence.ConnectionManager;
+import org.academiadecodigo.service.ServiceRegistry;
+import org.academiadecodigo.service.user.JdbcUserService;
+import org.academiadecodigo.service.user.UserService;
 
 public class Main extends Application {
 
@@ -17,6 +17,13 @@ public class Main extends Application {
 
     @Override
     public void init() {
+
+        ConnectionManager connectionManager = new ConnectionManager();
+
+        UserService userService = new JdbcUserService(connectionManager);
+//        userService.addUser(new User("Ruthiel Trevisan", "ruthiel.trevisan@gmail.com", "qwerty"));
+
+        ServiceRegistry.getInstance().addService(userService);
     }
 
     @Override
@@ -26,11 +33,10 @@ public class Main extends Application {
         Navigation.getInstance().loadScreen("login");
 
 
-        ConnectionManager connectionManager = new ConnectionManager();
-        UserService userService = new JdbcUserService(connectionManager);
-//        userService.addUser(new User("Ruthiel Trevisan", "ruthiel.trevisan@gmail.com", "qwerty"));
 
-        ((LoginController)Navigation.getInstance().getController("login")).setUserService(userService);
+
+
+//        ((LoginController)Navigation.getInstance().getController("login")).setUserService(userService);
     }
 }
 

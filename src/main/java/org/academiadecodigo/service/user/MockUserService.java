@@ -1,6 +1,7 @@
-package org.academiadecodigo.service;
+package org.academiadecodigo.service.user;
 
 import org.academiadecodigo.model.User;
+import org.academiadecodigo.service.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,5 +57,10 @@ public class MockUserService implements UserService {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).getUsername());
         }
+    }
+
+    @Override
+    public String getServiceName() {
+        return "userService";
     }
 }

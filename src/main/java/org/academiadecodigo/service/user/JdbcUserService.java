@@ -1,7 +1,8 @@
-package org.academiadecodigo.service;
+package org.academiadecodigo.service.user;
 
 import org.academiadecodigo.model.User;
 import org.academiadecodigo.persistence.ConnectionManager;
+import org.academiadecodigo.service.Service;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -157,5 +158,11 @@ public class JdbcUserService implements UserService {
             e.printStackTrace();
         }
         return result;
+    }
+
+
+    @Override
+    public String getServiceName() {
+        return "userService";
     }
 }
