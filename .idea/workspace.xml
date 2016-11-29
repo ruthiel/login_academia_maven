@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b52d08-4ead-4d2d-956f-32bdc2c87b8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/Service.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/ServiceRegistry.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/JdbcUserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/MockUserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/MockUserService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/Main.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/controller/LoggedController.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/controller/LoggedController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/controller/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/Main.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoggedController.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoggedController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java" />
     </list>
     <ignored path="login_academia_maven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,31 +57,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.users" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/e0c59ee8/ba9270a5-f823-461f-901a-f0388b4413f6/users.users">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/Service.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ServiceRegistry.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/ServiceRegistry.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,29 +77,29 @@
       <file leaf-file-name="JdbcUserService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1255">
-              <caret line="165" column="29" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
+            <state relative-caret-position="2865">
+              <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4159#4160#0" expanded="true" />
-                <element signature="e#4195#4196#0" expanded="true" />
-                <marker date="1480358043000" expanded="true" signature="1374:1411" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1412" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1429" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1436" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1437" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1447" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1448" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1465" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1466" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1468" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="1374:1469" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="2036:2201" placeholder="INSERT INTO users... " />
-                <marker date="1480358043000" expanded="true" signature="2792:2829" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="2792:2831" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="2792:2849" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="2792:2851" placeholder="SELECT * FRO... users" />
-                <marker date="1480358043000" expanded="true" signature="3677:3703" placeholder="SELECT COUNT... users" />
+                <element signature="e#5684#5685#0" expanded="true" />
+                <element signature="e#5720#5721#0" expanded="true" />
+                <marker date="1480418633000" expanded="true" signature="1422:1459" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1460" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1477" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1484" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1485" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1495" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1496" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1513" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1514" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1516" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="1422:1517" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="2450:2615" placeholder="INSERT INTO users... " />
+                <marker date="1480418633000" expanded="true" signature="3575:3612" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="3575:3614" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="3575:3632" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="3575:3634" placeholder="SELECT * FRO... users" />
+                <marker date="1480418633000" expanded="true" signature="4854:4880" placeholder="SELECT COUNT... users" />
               </folding>
             </state>
           </provider>
@@ -215,12 +186,12 @@
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/Service.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoggedController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/MockUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/ServiceRegistry.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java" />
       </list>
     </option>
   </component>
@@ -974,7 +945,7 @@
       <option name="presentableId" value="Default" />
       <updated>1479402293807</updated>
       <workItem from="1479402299973" duration="2875000" />
-      <workItem from="1480332266715" duration="19014000" />
+      <workItem from="1480332266715" duration="20931000" />
     </task>
     <task id="LOCAL-00001" summary="refactor the projeto model; implement ConnectionManager;">
       <created>1480335373626</created>
@@ -997,11 +968,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480348517527</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implement Service Registry; working;">
+      <created>1480358804414</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1480358804414</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21889000" />
+    <option name="totallyTimeSpent" value="23806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1015" extended-state="0" />
@@ -1069,7 +1047,8 @@
     <MESSAGE value="refactor the projeto model; implement ConnectionManager;" />
     <MESSAGE value="adding register to database, but it majes an error in findByName" />
     <MESSAGE value="register fully working; warning os SSL corrected." />
-    <option name="LAST_COMMIT_MESSAGE" value="register fully working; warning os SSL corrected." />
+    <MESSAGE value="implement Service Registry; working;" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement Service Registry; working;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1120,14 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1193,7 +1164,7 @@
         <state relative-caret-position="240">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1203,34 +1174,6 @@
         <state relative-caret-position="105">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/ServiceRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e0c59ee8/ba9270a5-f823-461f-901a-f0388b4413f6/users.users">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1272,14 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/Navigation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1288,31 +1223,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1255">
-          <caret line="165" column="29" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
+        <state relative-caret-position="615">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e0c59ee8/ba9270a5-f823-461f-901a-f0388b4413f6/users.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/Navigation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/ServiceRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4159#4160#0" expanded="true" />
-            <element signature="e#4195#4196#0" expanded="true" />
-            <marker date="1480358043000" expanded="true" signature="1374:1411" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1412" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1429" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1436" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1437" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1447" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1448" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1465" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1466" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1468" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="1374:1469" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="2036:2201" placeholder="INSERT INTO users... " />
-            <marker date="1480358043000" expanded="true" signature="2792:2829" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="2792:2831" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="2792:2849" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="2792:2851" placeholder="SELECT * FRO... users" />
-            <marker date="1480358043000" expanded="true" signature="3677:3703" placeholder="SELECT COUNT... users" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2865">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5684#5685#0" expanded="true" />
+            <element signature="e#5720#5721#0" expanded="true" />
+            <marker date="1480418633000" expanded="true" signature="1422:1459" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1460" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1477" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1484" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1485" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1495" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1496" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1513" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1514" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1516" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="1422:1517" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="2450:2615" placeholder="INSERT INTO users... " />
+            <marker date="1480418633000" expanded="true" signature="3575:3612" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="3575:3614" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="3575:3632" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="3575:3634" placeholder="SELECT * FRO... users" />
+            <marker date="1480418633000" expanded="true" signature="4854:4880" placeholder="SELECT COUNT... users" />
           </folding>
         </state>
       </provider>

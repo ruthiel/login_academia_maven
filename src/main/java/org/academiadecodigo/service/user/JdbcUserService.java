@@ -44,7 +44,9 @@ public class JdbcUserService implements UserService {
         checkConnection();
 
         Statement statement = null;
+
         try {
+            dbConnection.setAutoCommit(false);
             statement = dbConnection.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -56,10 +58,20 @@ public class JdbcUserService implements UserService {
             ResultSet resultSet = statement.executeQuery(query);
             if (resultSet.next()) {
                 toReturn = true;
+                dbConnection.commit();
             }
-
         } catch (SQLException e) {
-            e.printStackTrace();
+            try {
+                dbConnection.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+        } finally {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
         return toReturn;
@@ -72,6 +84,7 @@ public class JdbcUserService implements UserService {
 
         Statement statement = null;
         try {
+            dbConnection.setAutoCommit(false);
             statement = dbConnection.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -84,10 +97,21 @@ public class JdbcUserService implements UserService {
             int resultSet = statement.executeUpdate(query);
 
             if (resultSet == 1) {
+                dbConnection.commit();
                 System.out.println("User added");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            try {
+                dbConnection.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+        } finally {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
 
@@ -102,7 +126,10 @@ public class JdbcUserService implements UserService {
         checkConnection();
 
         Statement statement = null;
+
         try {
+
+            dbConnection.setAutoCommit(false);
             statement = dbConnection.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -120,9 +147,21 @@ public class JdbcUserService implements UserService {
                 String emaiValue = resultSet.getString(4);
 
                 user = new User(usernameValue, passwordValue, emaiValue);
+
+                dbConnection.commit();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            try {
+                dbConnection.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            } finally {
+                try {
+                    statement.close();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+            }
         }
         return user;
     }
@@ -136,6 +175,7 @@ public class JdbcUserService implements UserService {
 
         Statement statement = null;
         try {
+            dbConnection.setAutoCommit(false);
             statement = dbConnection.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -153,9 +193,22 @@ public class JdbcUserService implements UserService {
         try {
             if (resultSet.next()) {
                 result = resultSet.getInt(1);
+                dbConnection.commit();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+
+            try {
+                dbConnection.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+
+            } finally {
+                try {
+                    statement.close();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+            }
         }
         return result;
     }
