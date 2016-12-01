@@ -121,17 +121,13 @@
             System.out.println(userService);
 
             //verification of empty field and duplicate user
-            if(textfielduser.getText().isEmpty() || userService.findByName(textfielduser.getText()) != null) {
+            if(userService.findByName(textfielduser.getText()) != null || textfielduser.getText().isEmpty()) {
                 message.setText("Error in UserName");
                 return;
             }
 
-
-
-
             userService.addUser(new User(textfielduser.getText(), textfieldemail.getText(), passfield.getText()));
             message.setText("Sucess");
-
         }
 
         public void setUserService(UserService userService) {
@@ -141,10 +137,8 @@
 
         @Override
         public void initialize(URL location, ResourceBundle resources) {
-            userService = (UserService) ServiceRegistry.getInstance().getService("userService");
+            userService = (UserService) ServiceRegistry.getInstance().getService("UserService");
             showLogin();
-
-
         }
     }
 

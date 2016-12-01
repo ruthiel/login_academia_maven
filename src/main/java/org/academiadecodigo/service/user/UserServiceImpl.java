@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
     private RoleDao roleDao;
 
-    public UserServiceImpl(TransactionManager transactionManager, UserDao userDao, RoleDao roleDao) {
+    public UserServiceImpl(UserDao userDao, TransactionManager transactionManager) {
         this.transactionManager = transactionManager;
         this.userDao = userDao;
         this.roleDao = roleDao;
@@ -79,13 +79,14 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    // TODO: 01/12/16 fazer count
     @Override
     public int count() {
-
+        return 0;
     }
 
     @Override
     public String getServiceName() {
-        return null;
+        return UserService.class.getSimpleName();
     }
 }

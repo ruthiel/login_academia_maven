@@ -26,11 +26,10 @@ public class Main extends Application {
 
         UserService userService = new UserServiceImpl(
                 new HibernateUserDao(),
-                new HibernateRoleDao(),
                 new HibernateTransactionManager());
 
-        ServiceRegistry.getServiceRegistry()
-                .registerService(UserService.class.getSimpleName(), userService);
+        ServiceRegistry.getInstance()
+                .addService(userService);
 
     }
 
