@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(User user) {
+
         try {
 
             transactionManager.begin();
@@ -48,6 +49,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByName(String username) {
+
+        try {
+            transactionManager.begin();
+
+
+        }
         return null;
     }
 

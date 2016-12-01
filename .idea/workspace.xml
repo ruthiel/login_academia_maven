@@ -2,40 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b52d08-4ead-4d2d-956f-32bdc2c87b8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/RoleDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/UserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateRoleDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/TransactionException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/TransactionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/hibernate/HibernateTransactionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Hibernate_5_2_3_5_2_3.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/ConnectionManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/jdbc/ConnectionManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/HibernateSessionManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/hibernate/HibernateSessionManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/JdbcUserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/jdbc/JdbcUserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/Main.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/model/User.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/service/user/JdbcUserService.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/service/user/JdbcUserService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login_academia_maven.iml" afterPath="$PROJECT_DIR$/login_academia_maven.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/Main.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/ServiceRegistry.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/ServiceRegistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/User.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/User.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java" />
     </list>
     <ignored path="login_academia_maven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,7 +102,7 @@
       <file leaf-file-name="HibernateUserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/HibernateUserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="150">
               <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -167,8 +138,8 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="460">
+              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#797#798#0" expanded="true" />
@@ -233,12 +204,12 @@
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/hibernate/TransactionException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/jdbc/TransactionException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/TransactionException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/hibernate/HibernateTransactionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/TransactionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/hibernate/HibernateSessionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.java" />
       </list>
     </option>
@@ -1134,7 +1105,7 @@
       <workItem from="1479402299973" duration="2875000" />
       <workItem from="1480332266715" duration="21725000" />
       <workItem from="1480432927740" duration="1192000" />
-      <workItem from="1480587058621" duration="15744000" />
+      <workItem from="1480587058621" duration="16667000" />
     </task>
     <task id="LOCAL-00001" summary="refactor the projeto model; implement ConnectionManager;">
       <created>1480335373626</created>
@@ -1171,11 +1142,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480418674381</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="after explanation of Jorge">
+      <created>1480615815421</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1480615815421</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41536000" />
+    <option name="totallyTimeSpent" value="42459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1015" extended-state="0" />
@@ -1248,7 +1226,8 @@
     <MESSAGE value="register fully working; warning os SSL corrected." />
     <MESSAGE value="implement Service Registry; working;" />
     <MESSAGE value="add thread safe: auto-commit(false)/roolback." />
-    <option name="LAST_COMMIT_MESSAGE" value="add thread safe: auto-commit(false)/roolback." />
+    <MESSAGE value="after explanation of Jorge" />
+    <option name="LAST_COMMIT_MESSAGE" value="after explanation of Jorge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1636,24 +1615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/HibernateUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/hibernate/HibernateSessionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1678,18 +1639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#825#826#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateRoleDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1698,10 +1647,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/HibernateUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
