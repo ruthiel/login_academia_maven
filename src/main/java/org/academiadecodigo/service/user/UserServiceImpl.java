@@ -23,6 +23,25 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean authenticate(String username, String password) {
+
+        try {
+
+            transactionManager.begin();
+            User currentUser = findByName(username);
+
+            if (currentUser == null) {
+
+                return false;
+            }
+
+            transactionManager.commit();
+
+            return currentUser.getPassword().equals(password);
+
+        } catch (HibernateException ex) {
+            transactionManager.rollBack();
+        }
+
         return false;
     }
 
@@ -42,9 +61,6 @@ public class UserServiceImpl implements UserService {
         } catch (HibernateException ex) { // TODO: 01/12/16 change the exception
             transactionManager.rollBack();
         }
-        //begin transaction with TransactionManager
-        //verify if user exists by asking userDao
-
     }
 
     @Override
@@ -52,15 +68,20 @@ public class UserServiceImpl implements UserService {
 
         try {
             transactionManager.begin();
+            userDao.findByName(username);
 
+            transactionManager.commit();
 
+        } catch (HibernateException ex) {
+            transactionManager.rollBack();
         }
+
         return null;
     }
 
     @Override
     public int count() {
-        return 0;
+
     }
 
     @Override

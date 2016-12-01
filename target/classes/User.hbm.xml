@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+        <class name="org.academiadecodigo.model.User" table="users">
+
+            <id name="user_id" column="user_id" type="int">
+                <generator class="identity" />
+            </id>
+
+            <property name="username" column="user_name" type="string"/>
+            <property name="email" column="user_mail" type="string"/>
+            <property name="password" column="password" type="string"/>
+
+        </class>
+
+</hibernate-mapping>
