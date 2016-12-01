@@ -1,5 +1,7 @@
 package org.academiadecodigo.service;
 
+import org.hibernate.jmx.spi.JmxService;
+
 import java.util.HashMap;
 import java.util.Map;
 

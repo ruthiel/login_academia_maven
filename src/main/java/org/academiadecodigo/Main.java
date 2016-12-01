@@ -2,14 +2,20 @@ package org.academiadecodigo;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.academiadecodigo.controller.LoginController;
-import org.academiadecodigo.model.User;
-import org.academiadecodigo.persistence.ConnectionManager;
+import org.academiadecodigo.model.dao.hibernate.HibernateRoleDao;
+import org.academiadecodigo.model.dao.hibernate.HibernateUserDao;
+import org.academiadecodigo.persistence.hibernate.HibernateSessionManager;
+import org.academiadecodigo.persistence.hibernate.HibernateTransactionManager;
+import org.academiadecodigo.persistence.jdbc.ConnectionManager;
 import org.academiadecodigo.service.ServiceRegistry;
-import org.academiadecodigo.service.user.JdbcUserService;
+import org.academiadecodigo.service.user.HibernateUserService;
 import org.academiadecodigo.service.user.UserService;
+import org.academiadecodigo.service.user.UserServiceImpl;
 
 public class Main extends Application {
+
+    private ConnectionManager connectionManager;
+    private UserService userService;
 
     public static void main(String[] args) {
         launch(args);
@@ -18,25 +24,32 @@ public class Main extends Application {
     @Override
     public void init() {
 
-        ConnectionManager connectionManager = new ConnectionManager();
+        UserService userService = new UserServiceImpl(
+                new HibernateUserDao(),
+                new HibernateRoleDao(),
+                new HibernateTransactionManager());
 
-        UserService userService = new JdbcUserService(connectionManager);
-//        userService.addUser(new User("Ruthiel Trevisan", "ruthiel.trevisan@gmail.com", "qwerty"));
+        ServiceRegistry.getServiceRegistry()
+                .registerService(UserService.class.getSimpleName(), userService);
 
-        ServiceRegistry.getInstance().addService(userService);
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
-        Navigation.getInstance().setStage(primaryStage);
+        Navigation navigation = Navigation.getInstance();
+        navigation.setStage(primaryStage);
+
         Navigation.getInstance().loadScreen("login");
 
+        primaryStage.setTitle("Academia de Código");
+        primaryStage.show();
 
+    }
 
-
-
-//        ((LoginController)Navigation.getInstance().getController("login")).setUserService(userService);
+    @Override
+    public void stop() {
+        HibernateSessionManager.close();
     }
 }
 

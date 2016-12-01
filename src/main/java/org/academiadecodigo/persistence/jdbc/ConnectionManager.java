@@ -1,4 +1,4 @@
-package org.academiadecodigo.persistence;
+package org.academiadecodigo.persistence.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

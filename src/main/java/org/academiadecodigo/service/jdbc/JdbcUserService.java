@@ -1,8 +1,8 @@
-package org.academiadecodigo.service.user;
+package org.academiadecodigo.service.jdbc;
 
 import org.academiadecodigo.model.User;
-import org.academiadecodigo.persistence.ConnectionManager;
-import org.academiadecodigo.service.Service;
+import org.academiadecodigo.persistence.jdbc.ConnectionManager;
+import org.academiadecodigo.service.user.UserService;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

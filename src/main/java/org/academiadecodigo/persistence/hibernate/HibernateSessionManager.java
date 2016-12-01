@@ -1,4 +1,4 @@
-package org.academiadecodigo.persistence;
+package org.academiadecodigo.persistence.hibernate;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -26,11 +26,12 @@ public class HibernateSessionManager {
             sessionFactory = new MetadataSources(serviceRegistry).buildMetadata().buildSessionFactory();
 
         } catch (HibernateException ex) {
+            ex.printStackTrace();
             throw new ExceptionInInitializerError("Error creating hibernate session factory: " + ex.getMessage());
         }
     }
 
-    private Session getSession() {
+    public static Session getSession() {
         return sessionFactory.getCurrentSession();
     }
 
@@ -45,13 +46,13 @@ public class HibernateSessionManager {
         return session;
     }
 
-    public static void commitTransaction(){
-        sessionFactory.getCurrentSession().getSession().getTransaction().commit();
+    public static void commitTransaction() {
+        sessionFactory.getCurrentSession().getTransaction().commit();
 
     }
 
     public static void rollBackTransaction() {
-        sessionFactory.getCurrentSession().getSession().getTransaction().rollback();
+        sessionFactory.getCurrentSession().getTransaction().rollback();
     }
 
 }

@@ -11,7 +11,8 @@
             </id>
 
             <property name="username" column="user_name" type="string"/>
-            <property name="email" column="user_email" type="string"/>
+            <property name="email" column="user_mail" type="string"/>
+            <property name="password" column="password" type="string"/>
 
         </class>
 
