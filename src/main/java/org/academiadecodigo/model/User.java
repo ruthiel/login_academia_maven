@@ -5,9 +5,13 @@ package org.academiadecodigo.model;
  */
 public class User {
 
+    private Integer user_id;
     private String username;
     private String email;
     private String password;
+
+    public User() {
+    }
 
     public User(String username, String email, String password) {
         this.username = username;
@@ -37,5 +41,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 }
