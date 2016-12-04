@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18b52d08-4ead-4d2d-956f-32bdc2c87b8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/Tester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/model/User.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/model/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/service/user/MockUserService.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/service/user/MockUserService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/service/user/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/service/user/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/model/dao/hibernate/HibernateUserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/hibernate/HibernateTransactionManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/persistence/hibernate/HibernateTransactionManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/MockUserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/MockUserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/service/user/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" />
     </list>
     <ignored path="login_academia_maven.iws" />
@@ -1136,7 +1128,7 @@
       <workItem from="1479402299973" duration="2875000" />
       <workItem from="1480332266715" duration="21725000" />
       <workItem from="1480432927740" duration="1192000" />
-      <workItem from="1480587058621" duration="27447000" />
+      <workItem from="1480587058621" duration="27495000" />
     </task>
     <task id="LOCAL-00001" summary="refactor the projeto model; implement ConnectionManager;">
       <created>1480335373626</created>
@@ -1187,11 +1179,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480616727062</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Find bug; all working;">
+      <created>1480871338955</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1480871338955</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53239000" />
+    <option name="totallyTimeSpent" value="53287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1275,7 +1274,8 @@
     <MESSAGE value="add thread safe: auto-commit(false)/roolback." />
     <MESSAGE value="after explanation of Jorge" />
     <MESSAGE value="Hibernate methods done;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate methods done;" />
+    <MESSAGE value="Find bug; all working;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Find bug; all working;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
