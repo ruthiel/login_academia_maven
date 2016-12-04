@@ -14,16 +14,20 @@ public class HibernateUserDao implements UserDao {
     @Override
     public void create(User user) {
         Session session = HibernateSessionManager.getSession();
+        System.out.println("got a session! " + session);
         session.save(user);
     }
 
     @Override
     public User findByName(String username) {
+        System.out.println("finding by name: " + username);
         Session session = HibernateSessionManager.getSession();
         Query query = session.createQuery("FROM User WHERE username = :username");
         query.setString("username", username);
 
         User user = (User)query.uniqueResult();
+
+        System.out.println("found " + user);
 
         return user;
     }

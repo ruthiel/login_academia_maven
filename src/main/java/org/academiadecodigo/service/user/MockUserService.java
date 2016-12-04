@@ -30,7 +30,7 @@ public class MockUserService implements UserService {
     @Override
     public void addUser(User user) {
        if ((findByName(user.getUsername()) != null)) {
-           System.out.println("This user already exists!");
+           System.out.println("This user already exists! " + user.getUsername());
            return;
        }
         System.out.println("User " + user.getUsername() + " added!");

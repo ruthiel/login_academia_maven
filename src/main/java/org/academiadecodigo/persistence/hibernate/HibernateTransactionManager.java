@@ -19,11 +19,11 @@ public class HibernateTransactionManager implements TransactionManager {
 
     @Override
     public void commit() {
-
+        HibernateSessionManager.commitTransaction();
     }
 
     @Override
     public void rollBack() {
-
+        HibernateSessionManager.rollBackTransaction();
     }
 }

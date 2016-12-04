@@ -54,6 +54,8 @@ public class UserServiceImpl implements UserService {
 
             if (userDao.findByName(user.getUsername()) == null) {
                 userDao.create(user);
+                System.out.println("added a new user" + user.getUsername());
+
             }
 
             transactionManager.commit();
@@ -66,9 +68,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByName(String username) {
 
+        User u = null;
+
         try {
             transactionManager.begin();
-            userDao.findByName(username);
+            u = userDao.findByName(username);
 
             transactionManager.commit();
 
@@ -76,7 +80,7 @@ public class UserServiceImpl implements UserService {
             transactionManager.rollBack();
         }
 
-        return null;
+        return u;
     }
 
     // TODO: 01/12/16 fazer count

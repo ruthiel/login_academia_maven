@@ -15,13 +15,13 @@
         <sequence-identity>1</sequence-identity>
       </column>
       <column id="4" parent="2" name="user_name">
-        <data-type>char(50)</data-type>
+        <data-type>varchar(255)</data-type>
       </column>
-      <column id="5" parent="2" name="password">
-        <data-type>char(8)</data-type>
+      <column id="5" parent="2" name="user_mail">
+        <data-type>varchar(255)</data-type>
       </column>
-      <column id="6" parent="2" name="user_mail">
-        <data-type>char(100)</data-type>
+      <column id="6" parent="2" name="password">
+        <data-type>varchar(255)</data-type>
       </column>
       <key id="7" parent="2" name="PRIMARY">
         <columns>user_id</columns>
