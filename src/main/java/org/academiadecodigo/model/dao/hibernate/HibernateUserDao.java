@@ -9,33 +9,11 @@ import org.hibernate.Session;
 /**
  * Created by codecadet on 01/12/16.
  */
-public class HibernateUserDao implements UserDao {
+public class HibernateUserDao extends HibernateDao<User> implements UserDao {
+
 
     @Override
-    public void create(User user) {
-        Session session = HibernateSessionManager.getSession();
-        System.out.println("got a session! " + session);
-        session.save(user);
-    }
-
-    @Override
-    public User findByName(String username) {
-        System.out.println("finding by name: " + username);
-        Session session = HibernateSessionManager.getSession();
-        Query query = session.createQuery("FROM User WHERE username = :username");
-        query.setString("username", username);
-
-        User user = (User)query.uniqueResult();
-
-        System.out.println("found " + user);
-
-        return user;
-    }
-
-    @Override
-    public void delete(User user) {
-        Session session = HibernateSessionManager.getSession();
-        session.delete(user);
-
+    public User findByName(User user) {
+        return null;
     }
 }
