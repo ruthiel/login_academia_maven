@@ -11,6 +11,9 @@ import org.hibernate.Session;
  */
 public class HibernateUserDao extends HibernateDao<User> implements UserDao {
 
+    public HibernateUserDao(Class<User> type) {
+        super(type);
+    }
 
     @Override
     public User findByName(User user) {

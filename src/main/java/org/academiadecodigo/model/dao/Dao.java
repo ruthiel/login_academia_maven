@@ -15,5 +15,5 @@ public interface Dao<O> {
 
     void delete(O object);
 
-    void count();
+    Long count();
 }

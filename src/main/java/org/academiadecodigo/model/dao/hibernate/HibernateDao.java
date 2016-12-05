@@ -2,7 +2,10 @@ package org.academiadecodigo.model.dao.hibernate;
 
 import org.academiadecodigo.model.dao.Dao;
 import org.academiadecodigo.persistence.hibernate.HibernateSessionManager;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.TransactionException;
+import org.hibernate.criterion.Projections;
 
 import java.util.List;
 
@@ -11,27 +14,50 @@ import java.util.List;
  */
 public abstract class HibernateDao<O> implements Dao<O> {
 
-    @Override
+    private Class<O> type;
+
+    public HibernateDao(Class<O> type) {
+        this.type = type;
+    }
+
     public void create(O object) {
+
         Session session = HibernateSessionManager.getSession();
         session.save(object);
     }
 
-    @Override
-    public List<O> findAll(String name) {
-        return null;
-    }
-
-    @Override
     public void delete(O object) {
         Session session = HibernateSessionManager.getSession();
         session.delete(object);
 
     }
 
-    @Override
-    public void count() {
+    @SuppressWarnings("unchecked")
+    public List<O> findAll() {
 
+        try {
+
+        return HibernateSessionManager.getSession().createCriteria(type).list();
+
+        } catch (HibernateException hex) {
+            throw new TransactionException(hex);
+        }
+
+    }
+
+
+    @Override
+    public long count() {
+
+        try {
+
+            return (Long) HibernateSessionManager.getSession().createCriteria(type)
+                    .setProjection(Projections.rowCount())
+                    .uniqueResult();
+
+        } catch (HibernateException hex) {
+            throw new TransactionException(hex);
+        }
     }
 
 }
