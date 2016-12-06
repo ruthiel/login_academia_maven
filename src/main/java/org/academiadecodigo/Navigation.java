@@ -41,6 +41,7 @@ public final class Navigation {
         try {
             FXMLLoader fxmlLoader;
             System.out.println(PATH + "/" + view);
+
             fxmlLoader = new FXMLLoader(getClass().getResource(PATH + "/" + view + ".fxml"));
             Parent root = fxmlLoader.load();
             controllers.put(view, (Initializable)fxmlLoader.getController());

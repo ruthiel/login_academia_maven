@@ -12,47 +12,38 @@ import org.hibernate.service.ServiceRegistry;
  */
 public class HibernateSessionManager {
 
-    private static SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     private HibernateSessionManager() {
 
     }
 
-    static {
-        try {
-
-            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
-
-            sessionFactory = new MetadataSources(serviceRegistry).buildMetadata().buildSessionFactory();
-
-        } catch (HibernateException ex) {
-            ex.printStackTrace();
-            throw new ExceptionInInitializerError("Error creating hibernate session factory: " + ex.getMessage());
-        }
-    }
-
-    public static Session getSession() {
+    public Session getSession() {
         return sessionFactory.getCurrentSession();
     }
 
-    public static void close() {
+    public void close() {
         sessionFactory.close();
     }
 
-    public static Session beginTransaction() {
+    public Session beginTransaction() {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
 
         return session;
     }
 
-    public static void commitTransaction() {
+    public void commitTransaction() {
         sessionFactory.getCurrentSession().getTransaction().commit();
 
     }
 
-    public static void rollBackTransaction() {
+    public void rollBackTransaction() {
         sessionFactory.getCurrentSession().getTransaction().rollback();
     }
 
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 }

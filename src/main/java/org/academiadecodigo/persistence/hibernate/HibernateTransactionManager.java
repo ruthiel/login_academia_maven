@@ -8,22 +8,29 @@ import org.hibernate.Session;
  */
 public class HibernateTransactionManager implements TransactionManager {
 
+    private HibernateSessionManager sessionManager;
 
-
-
+    public HibernateTransactionManager(HibernateSessionManager sessionManager) {
+        this.sessionManager = sessionManager;
+    }
 
     @Override
     public void begin() {
-        HibernateSessionManager.beginTransaction();
+        sessionManager.beginTransaction();
     }
 
     @Override
     public void commit() {
-        HibernateSessionManager.commitTransaction();
+        sessionManager.commitTransaction();
     }
 
     @Override
     public void rollBack() {
-        HibernateSessionManager.rollBackTransaction();
+        sessionManager.rollBackTransaction();
     }
+
+    public void setSessionManager(HibernateSessionManager sessionManager) {
+        this.sessionManager = sessionManager;
+    }
+
 }
