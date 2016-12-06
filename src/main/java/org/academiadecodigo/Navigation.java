@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -43,6 +44,15 @@ public final class Navigation {
             System.out.println(PATH + "/" + view);
 
             fxmlLoader = new FXMLLoader(getClass().getResource(PATH + "/" + view + ".fxml"));
+
+            fxmlLoader.setControllerFactory(new Callback<Class<?>, Object>() {
+                @Override
+                public Object call(Class<?> param) {
+                    return controllers.get(param.getSimpleName());
+                }
+            });
+
+
             Parent root = fxmlLoader.load();
             controllers.put(view, (Initializable)fxmlLoader.getController());
 
@@ -74,5 +84,9 @@ public final class Navigation {
 
     public Initializable getController(String view) {
         return controllers.get(view);
+    }
+
+    public void setControllers(Map<String, Initializable> controllers) {
+        this.controllers = controllers;
     }
 }

@@ -93,4 +93,16 @@ public class UserServiceImpl implements UserService {
     public String getServiceName() {
         return UserService.class.getSimpleName();
     }
+
+    public void setTransactionManager(TransactionManager transactionManager) {
+        this.transactionManager = transactionManager;
+    }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    public void setRoleDao(RoleDao roleDao) {
+        this.roleDao = roleDao;
+    }
 }

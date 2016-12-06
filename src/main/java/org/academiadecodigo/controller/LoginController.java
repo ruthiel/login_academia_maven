@@ -137,8 +137,10 @@
 
         @Override
         public void initialize(URL location, ResourceBundle resources) {
-            userService = (UserService) ServiceRegistry.getInstance().getService("UserService");
+//            userService = (UserService) ServiceRegistry.getInstance().getService("UserService");
             showLogin();
         }
+
+
     }
 

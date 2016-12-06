@@ -11,6 +11,8 @@ import org.academiadecodigo.service.ServiceRegistry;
 import org.academiadecodigo.service.user.HibernateUserService;
 import org.academiadecodigo.service.user.UserService;
 import org.academiadecodigo.service.user.UserServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main extends Application {
 
@@ -24,33 +26,36 @@ public class Main extends Application {
     @Override
     public void init() {
 
-        UserService userService = new UserServiceImpl(
-                new HibernateUserDao(),
-                new HibernateRoleDao(),
-                new HibernateTransactionManager());
+//        UserService userService = new UserServiceImpl(
+//                new HibernateUserDao(),
+//                new HibernateRoleDao(),
+//                new HibernateTransactionManager());
 
-        ServiceRegistry.getInstance()
-                .addService(userService);
+//       ServiceRegistry.getInstance()
+//                .addService(userService);
+
 
     }
 
     @Override
     public void start(Stage primaryStage) {
 
-        Navigation navigation = Navigation.getInstance();
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-config.xml");
+
+        Navigation navigation = context.getBean("navigation", Navigation.class);
         navigation.setStage(primaryStage);
 
-        Navigation.getInstance().loadScreen("login");
+        navigation.loadScreen("login");
 
         primaryStage.setTitle("Academia de Código");
         primaryStage.show();
 
     }
 
-    @Override
-    public void stop() {
-        HibernateSessionManager.close();
-    }
+//    @Override
+//    public void stop() {
+//        hibernateSessionManager.close();
+//    }
 }
 
 

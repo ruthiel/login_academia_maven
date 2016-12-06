@@ -22,7 +22,7 @@ public class HibernateUserDao extends HibernateDao<User> implements UserDao {
     public User findByName(String name) {
 
         try {
-            List<User> users = HibernateSessionManager.getSession()
+            List<User> users = hibernateSessionManager.getSession()
                     .createCriteria(User.class)
                     .add(Restrictions.eq("username", name))
                     .list();

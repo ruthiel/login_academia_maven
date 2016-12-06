@@ -15,18 +15,18 @@ import java.util.List;
 public abstract class HibernateDao<O> implements Dao<O> {
 
     private Class<O> type;
-    private HibernateSessionManager sessionManager;
+    public HibernateSessionManager hibernateSessionManager;
 
     public HibernateDao(Class<O> type, HibernateSessionManager sessionManager) {
         this.type = type;
-        this.sessionManager = sessionManager;
+        this.hibernateSessionManager = sessionManager;
     }
 
     public void create(O object) {
 
         try {
 
-            Session session = HibernateSessionManager.getSession();
+            Session session = hibernateSessionManager.getSession();
             session.save(object);
 
         } catch (HibernateException hex) {
@@ -38,7 +38,7 @@ public abstract class HibernateDao<O> implements Dao<O> {
 
         try {
 
-        Session session = HibernateSessionManager.getSession();
+        Session session = hibernateSessionManager.getSession();
         session.delete(object);
 
         } catch (HibernateException hex) {
@@ -51,7 +51,7 @@ public abstract class HibernateDao<O> implements Dao<O> {
 
         try {
 
-            return HibernateSessionManager.getSession().createCriteria(type).list();
+            return hibernateSessionManager.getSession().createCriteria(type).list();
 
         } catch (HibernateException hex) {
             throw new TransactionException(hex);
@@ -65,7 +65,7 @@ public abstract class HibernateDao<O> implements Dao<O> {
 
         try {
 
-            return (long) HibernateSessionManager.getSession().createCriteria(type)
+            return (long) hibernateSessionManager.getSession().createCriteria(type)
                     .setProjection(Projections.rowCount())
                     .uniqueResult();
 

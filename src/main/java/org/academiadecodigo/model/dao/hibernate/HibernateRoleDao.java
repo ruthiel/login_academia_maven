@@ -24,7 +24,7 @@ public class HibernateRoleDao extends HibernateDao<Role> implements RoleDao {
 
         try {
 
-            List<Role> roles = HibernateSessionManager.getSession().createCriteria(Role.class)
+            List<Role> roles = hibernateSessionManager.getSession().createCriteria(Role.class)
                     .add(Restrictions.eq("type", type))
                     .list();
 

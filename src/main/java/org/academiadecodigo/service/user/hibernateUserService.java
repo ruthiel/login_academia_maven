@@ -11,19 +11,21 @@ import org.hibernate.Session;
  */
 public class HibernateUserService implements UserService {
 
+    private HibernateSessionManager hibernateSessionManager;
+
     @Override
     public boolean authenticate(String username, String password) {
 
         try {
-            Session session = HibernateSessionManager.beginTransaction();
-            Query query = session.createQuery("FROM User WHERE username");
+            Session session = hibernateSessionManager.beginTransaction();
+            //Query query = session.createQuery("FROM User WHERE username");
 
 
-            HibernateSessionManager.commitTransaction();
+            hibernateSessionManager.commitTransaction();
             return true;
 
         } catch (HibernateException e) {
-            HibernateSessionManager.rollBackTransaction();
+            hibernateSessionManager.rollBackTransaction();
         }
 
         return false;
@@ -33,12 +35,12 @@ public class HibernateUserService implements UserService {
     public void addUser(User user) {
 
         try {
-            Session session = HibernateSessionManager.beginTransaction();
+            Session session = hibernateSessionManager.beginTransaction();
             session.save(user);
-            HibernateSessionManager.commitTransaction();
+            hibernateSessionManager.commitTransaction();
 
         } catch (HibernateException ex) {
-            HibernateSessionManager.rollBackTransaction();
+            hibernateSessionManager.rollBackTransaction();
             System.out.println("Error: " + ex.getStackTrace());
 
 
@@ -52,20 +54,20 @@ public class HibernateUserService implements UserService {
         User user = null;
 
         try {
-            Session session = HibernateSessionManager.beginTransaction();
+            Session session = hibernateSessionManager.beginTransaction();
             Query query = session.createQuery("FROM User WHERE username = :username");
             query.setString("username", username);
 
             user = (User) query.uniqueResult();
 
-            HibernateSessionManager.commitTransaction();
+            hibernateSessionManager.commitTransaction();
 
         } catch (HibernateException ex) {
-            HibernateSessionManager.rollBackTransaction();
+            hibernateSessionManager.rollBackTransaction();
             System.out.println("Error : " + ex.getMessage());
 
         } finally {
-            HibernateSessionManager.close();
+            hibernateSessionManager.close();
         }
 
         return user;
