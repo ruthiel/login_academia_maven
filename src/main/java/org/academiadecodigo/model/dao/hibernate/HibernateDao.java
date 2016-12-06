@@ -1,10 +1,10 @@
 package org.academiadecodigo.model.dao.hibernate;
 
 import org.academiadecodigo.model.dao.Dao;
+import org.academiadecodigo.persistence.TransactionException;
 import org.academiadecodigo.persistence.hibernate.HibernateSessionManager;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.TransactionException;
 import org.hibernate.criterion.Projections;
 
 import java.util.List;
@@ -15,21 +15,35 @@ import java.util.List;
 public abstract class HibernateDao<O> implements Dao<O> {
 
     private Class<O> type;
+    private HibernateSessionManager sessionManager;
 
-    public HibernateDao(Class<O> type) {
+    public HibernateDao(Class<O> type, HibernateSessionManager sessionManager) {
         this.type = type;
+        this.sessionManager = sessionManager;
     }
 
     public void create(O object) {
 
-        Session session = HibernateSessionManager.getSession();
-        session.save(object);
+        try {
+
+            Session session = HibernateSessionManager.getSession();
+            session.save(object);
+
+        } catch (HibernateException hex) {
+            throw new TransactionException(hex);
+        }
     }
 
     public void delete(O object) {
+
+        try {
+
         Session session = HibernateSessionManager.getSession();
         session.delete(object);
 
+        } catch (HibernateException hex) {
+            throw new TransactionException(hex);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -37,7 +51,7 @@ public abstract class HibernateDao<O> implements Dao<O> {
 
         try {
 
-        return HibernateSessionManager.getSession().createCriteria(type).list();
+            return HibernateSessionManager.getSession().createCriteria(type).list();
 
         } catch (HibernateException hex) {
             throw new TransactionException(hex);
@@ -51,7 +65,7 @@ public abstract class HibernateDao<O> implements Dao<O> {
 
         try {
 
-            return (Long) HibernateSessionManager.getSession().createCriteria(type)
+            return (long) HibernateSessionManager.getSession().createCriteria(type)
                     .setProjection(Projections.rowCount())
                     .uniqueResult();
 

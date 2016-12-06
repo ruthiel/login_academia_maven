@@ -7,5 +7,5 @@ import org.academiadecodigo.model.User;
  */
 public interface UserDao extends Dao<User> {
 
-    User findByName(User user);
+    User findByName(String name);
 }
