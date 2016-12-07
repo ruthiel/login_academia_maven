@@ -4,7 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="userServiceImpl" class="org.academiadecodigo.service.user.UserServiceImpl">
-        <constructor-arg name="transactionManager" ref="hibernateTransactionManager"/>
         <constructor-arg name="userDao" ref="userDao"/>
         <constructor-arg name="roleDao" ref="roleDao"/>
     </bean>

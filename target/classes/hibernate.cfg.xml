@@ -17,7 +17,7 @@
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
     <!-- Enable Hibernate's automatic session context management -->
-    <property name="current_session_context_class">thread</property>
+    <!--<property name="current_session_context_class">thread</property>-->
 
     <!-- DB schema will be updated if needed, do not use in production -->
     <property name="hbm2ddl.auto">create</property>

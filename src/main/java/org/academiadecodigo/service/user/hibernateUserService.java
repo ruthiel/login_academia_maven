@@ -5,6 +5,7 @@ import org.academiadecodigo.persistence.hibernate.HibernateSessionManager;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by codecadet on 01/12/16.
@@ -13,6 +14,7 @@ public class HibernateUserService implements UserService {
 
     private HibernateSessionManager hibernateSessionManager;
 
+    @Transactional
     @Override
     public boolean authenticate(String username, String password) {
 

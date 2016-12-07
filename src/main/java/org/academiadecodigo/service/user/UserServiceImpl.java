@@ -5,18 +5,17 @@ import org.academiadecodigo.model.dao.RoleDao;
 import org.academiadecodigo.model.dao.UserDao;
 import org.academiadecodigo.persistence.TransactionManager;
 import org.hibernate.HibernateException;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by codecadet on 01/12/16.
  */
+@Transactional
 public class UserServiceImpl implements UserService {
-
-    private TransactionManager transactionManager;
     private UserDao userDao;
     private RoleDao roleDao;
 
-    public UserServiceImpl(UserDao userDao, RoleDao roleDao, TransactionManager transactionManager) {
-        this.transactionManager = transactionManager;
+    public UserServiceImpl(UserDao userDao, RoleDao roleDao) {
         this.userDao = userDao;
         this.roleDao = roleDao;
     }
@@ -24,63 +23,31 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean authenticate(String username, String password) {
 
-        try {
-
-            transactionManager.begin();
-            User currentUser = findByName(username);
-
-            if (currentUser == null) {
-
-                return false;
-            }
-
-            transactionManager.commit();
-
-            return currentUser.getPassword().equals(password);
-
-        } catch (HibernateException ex) {
-            transactionManager.rollBack();
+        User currentUser = findByName(username);
+        if (currentUser == null) {
+            return false;
         }
 
-        return false;
+        return currentUser.getPassword().equals(password);
     }
 
     @Override
     public void addUser(User user) {
 
-        try {
-
-            transactionManager.begin();
-
-            if (userDao.findByName(user.getUsername()) == null) {
-                userDao.create(user);
-                System.out.println("added a new user" + user.getUsername());
-
-            }
-
-            transactionManager.commit();
-
-        } catch (HibernateException ex) { // TODO: 01/12/16 change the exception
-            transactionManager.rollBack();
+        if (userDao.findByName(user.getUsername()) == null) {
+            userDao.create(user);
+            System.out.println("added a new user" + user.getUsername());
         }
+
     }
 
     @Override
     public User findByName(String username) {
 
-        User u = null;
-
-        try {
-            transactionManager.begin();
-            u = userDao.findByName(username);
-
-            transactionManager.commit();
-
-        } catch (HibernateException ex) {
-            transactionManager.rollBack();
-        }
+        User u = userDao.findByName(username);
 
         return u;
+
     }
 
     // TODO: 01/12/16 fazer count
@@ -92,10 +59,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public String getServiceName() {
         return UserService.class.getSimpleName();
-    }
-
-    public void setTransactionManager(TransactionManager transactionManager) {
-        this.transactionManager = transactionManager;
     }
 
     public void setUserDao(UserDao userDao) {

@@ -15,6 +15,16 @@
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/spring-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/persistence.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/persistence.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
+          <dependency>fileset</dependency>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/persistence.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/presentation.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/service.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/spring-config.xml</file>
         </fileset>
       </configuration>
     </facet>
